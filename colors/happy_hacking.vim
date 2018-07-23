@@ -104,7 +104,7 @@ call s:Color("PmenuSel", s:white,  s:gray2,  s:t_white,  s:t_gray2)
 call s:Color("Cursor",   "NONE",   s:gray2,  "NONE",     s:t_gray2)
 call s:Color("Normal",   s:white,  s:gray1,  s:t_white,  s:t_gray1)
 call s:Color("Search",   s:t_sea, "NONE",   s:t_sea, "18")
-call s:Color("Title",    s:white,  "NONE",   s:t_white,  "NONE", "bold")
+call s:Color("Title",    s:white,  "NONE",   s:t_gold,  "NONE", "bold") " This is used by ctrlsf.vim as filename
 
 call s:Color("LineNr",       s:gray3, "NONE",  s:t_gray3, "NONE")
 call s:Color("StatusLine",   s:white, s:gray6, s:t_white, s:t_gray6)
@@ -122,7 +122,7 @@ call s:Color("SpecialKey",  s:white, s:gray2, s:t_white, s:t_gray2)
 call s:Color("Directory",   s:blue,  "NONE",  s:t_blue,  "NONE")
 
 call s:Color("Comment",  s:gray4,    "NONE", s:t_gray4,    "NONE")
-call s:Color("Todo",     s:gray5,    "NONE", s:t_gray5,    "NONE")
+call s:Color("Todo",     s:turqoise,    "NONE", s:t_turqoise,    "NONE")
 call s:Color("String",   s:green,    "NONE", s:t_green,    "NONE")
 call s:Color("Keyword",  s:red,     "NONE", s:t_red,     "NONE")
 call s:Color("Number",   s:turqoise, "NONE", s:t_turqoise, "NONE")
@@ -131,8 +131,9 @@ call s:Color("Macro",    s:orange,   "NONE", s:t_orange,   "NONE")
 call s:Color("Function", s:yellow,   "NONE", s:t_yellow,   "NONE")
 call s:Color("Notice",   s:yellow,   "NONE", s:t_sea,   "NONE")
 
-call s:Color("MatchParen", "NONE", "NONE", "NONE", "NONE", "bold")
-
+" OK SO APPARENTLY CTRLSF uses Matching Parenthesis color for matches in its
+" search. This is something i kinda dont like but screw it for now.
+call s:Color("MatchParen", "NONE", "NONE", "171", "54")
 
 hi! link CursorLine   Cursor
 hi! link Identifier   Normal
