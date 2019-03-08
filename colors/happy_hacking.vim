@@ -64,7 +64,7 @@ let s:t_yellow   = "222" " 221
 let s:t_blue     = "103"
 let s:t_green    = "107"
 let s:t_turqoise = "157"
-let s:t_orange   = "179"
+let s:t_orange   = "167"
 let s:t_pink     = "211"
 let s:t_gold     = "186"
 let s:t_red      = "203"
@@ -74,7 +74,8 @@ let s:t_gray3    = "59"
 let s:t_gray4    = "102"
 let s:t_gray5    = "145"
 let s:t_gray6    = "237"
-let s:t_sea = "123"
+let s:t_sea      = "123"
+let s:t_lightpink= "231"
 " ============================================================================
 " Color Functions
 
@@ -130,13 +131,17 @@ call s:Color("Regexp",   s:orange,   "NONE", s:t_orange,   "NONE")
 call s:Color("Macro",    s:orange,   "NONE", s:t_orange,   "NONE")
 call s:Color("Function", s:yellow,   "NONE", s:t_yellow,   "NONE")
 call s:Color("Notice",   s:yellow,   "NONE", s:t_sea,   "NONE")
+call s:Color("Statement",   s:yellow,   "NONE", s:t_orange,   "NONE")
+call s:Color("TestingVal",   s:yellow,   "NONE", s:t_lightpink,   "NONE")
 
 " OK SO APPARENTLY CTRLSF uses Matching Parenthesis color for matches in its
 " search. This is something i kinda dont like but screw it for now.
 call s:Color("MatchParen", "NONE", "NONE", "171", "54")
 
+hi! link cCustomClass TestingVal
+hi! link cCustomTemplateFunc TestingVal
 hi! link CursorLine   Cursor
-hi! link Identifier   Normal
+hi! link Identifier   TestingVal
 hi! link Constant     Normal
 hi! link Operator     Normal
 hi! link Type         Keyword
@@ -148,7 +153,7 @@ hi! link Error        ErrorMsg
 hi! link NonText      LineNr
 hi! link PreProc      Normal
 hi! link Special      Normal
-hi! link Boolean      Keyword
+hi! link Boolean      Number
 hi! link StorageClass Keyword
 hi! link MoreMsg      Normal
 hi! link Character    String
